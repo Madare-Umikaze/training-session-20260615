@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>練習課題2 模範解答</title>
+  <style>
+    /* 研修用に最低限の配置と見た目だけCSSで整えます */
+    body {
+      text-align: center;
+      padding-top: 50px;
+      font-family: sans-serif;
+    }
+    #status-text {
+      font-size: 24px;
+      font-weight: bold;
+      color: green; /* 初期値は緑色 */
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 0 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="status-text">現在の状態：通常時</div>
+  
+  <button id="danger-btn">危険モードにする</button>
+  <button id="safe-btn">安全モードに戻す</button>
+
+  <script>
+    // ① getElementById を使って要素を掴む
+    // ※querySelectorとは違い、カッコの中に「#」をつける必要はありません！
+    const statusText = document.getElementById('status-text');
+    const dangerButton = document.getElementById('danger-btn');
+    const safeButton = document.getElementById('safe-btn');
+
+    // ② 危険モードボタンが押されたときの処理
+    dangerButton.addEventListener('click', function() {
+      // 文字の中身を書き換える
+      statusText.textContent = "現在の状態：【危険】トラブル発生中！";
+      // 文字の色（CSS）を直接赤色に書き換える
+      statusText.style.color = "red";
+    });
+
+    // ③ 安全モードボタンが押されたときの処理
+    safeButton.addEventListener('click', function() {
+      // 文字の中身を元に戻す
+      statusText.textContent = "現在の状態：通常時";
+      // 文字の色（CSS）を直接緑色に戻す
+      statusText.style.color = "green";
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>練習課題1 模範解答</title>
+</head>
+<body>
+
+  <input type="text" id="user-input" placeholder="文字を入力してください">
+  <button id="submit-btn">表示する</button>
+  
+  <div id="output-box"></div>
+
+  <script>
+    // ① 要素を捕まえる（取得する）
+    const inputElement = document.querySelector('#user-input');
+    const buttonElement = document.querySelector('#submit-btn');
+    const outputElement = document.querySelector('#output-box');
+
+    // ② ボタンが押されたとき（click）のイベントを監視する
+    buttonElement.addEventListener('click', function() {
+      
+      // inputタグに入力された文字（value）を取得して、変数に入れる
+      const inputText = inputElement.value;
+      
+      // 空のdivの中身（textContent）に入力された文字を代入して書き換える
+      outputElement.textContent = inputText;
+      
+    });
+  </script>
+
+</body>
+</html>
