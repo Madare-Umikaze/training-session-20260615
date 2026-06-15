@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>学園祭サイト</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-8 flex flex-col items-center justify-center min-h-screen">
+
+  <div class="bg-white p-6 rounded-2xl shadow-md w-full max-w-md text-center">
+    <h1 id="status-title" class="text-2xl font-bold text-gray-800 mb-2">開催まであと...</h1>
+    
+    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6 rounded text-left">
+      <p id="news-box" class="text-gray-700 text-sm">現在、新着お知らせはありません。</p>
+    </div>
+
+    <button id="alert-btn" class="bg-red-500 text-white px-4 py-2 rounded-lg font-bold hover:bg-red-600 transition">
+      緊急ニュースを配信
+    </button>
+  </div>
+
+  <script>
+    // 要素を捕まえる（取得する）
+    const btn = document.getElementById('alert-btn');
+
+    // ボタンを押したときに、この function（関数）を実行する
+    btn.addEventListener('click', function() {
+        // function（関数）の処理
+        const news = document.getElementById('news-box');
+        news.innerText = "【重要】ステージは体育館に変更です";
+    });
+  
+  </script>
+</body>
+</html>

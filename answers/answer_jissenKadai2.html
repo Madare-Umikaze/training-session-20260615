@@ -20,13 +20,13 @@
   </div>
 
   <script>
-  // ① 変数を宣言
+  // ① 変数を宣言（ここの数値が0かそれ以外かで、h1に表示される文字が変わる）
   let daysLeft = 3;
 
-  // ② タイトルのパーツを掴む
+  // ② タイトルの要素を捕まえる（取得する）
   const title = document.getElementById('status-title');
 
-  // ③ 条件分岐（ProcessingやC言語と構文は全く同じ！）
+  // ③ 条件分岐（ProcessingやC言語と基本構文は全く同じ！）
   if (daysLeft === 0) {
       title.innerText = "ついに本日開催！🎉";
   } else {
