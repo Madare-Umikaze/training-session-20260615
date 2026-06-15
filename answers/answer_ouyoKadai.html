@@ -21,7 +21,7 @@
 
   <script>
   // ====== ここから下にJavaScriptを書いていく ======
-  // ① 変数を宣言（Processingやってるから const/let の動的型付けを意識させる）
+  // ① 変数を宣言
   let daysLeft = 3;
 
   // ② タイトルのパーツを掴む
@@ -31,7 +31,7 @@
   if (daysLeft === 0) {
       title.innerText = "ついに本日開催！🎉";
   } else {
-      // Python経験者のDさんにはバッククォートを使った「テンプレートリテラル」を教えても良い
+      
       title.innerText = "開催まであと " + daysLeft + " 日";
   }
   
