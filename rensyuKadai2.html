@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>練習課題2</title>
+  <title>練習課題2 模範解答</title>
   <style>
     /* 研修用に最低限の配置と見た目だけCSSで整えます */
     body {
@@ -30,9 +30,29 @@
   
   <button id="danger-btn">危険モードにする</button>
   <button id="safe-btn">安全モードに戻す</button>
+
   <script>
-  // ====== ここから下にJavaScriptを書いていく ======
-  
+    // ① getElementById を使って要素を掴む
+    // ※querySelectorとは違い、カッコの中に「#」をつける必要はありません！
+
+    
+
+    // ② 危険モードボタンが押されたときの処理
+    dangerButton.addEventListener('click', function() {
+      // 文字の中身を書き換える
+      statusText.textContent = "現在の状態：【危険】トラブル発生中！";
+      // 文字の色（CSS）を直接赤色に書き換える
+      statusText.style.color = "red";
+    });
+
+    // ③ 安全モードボタンが押されたときの処理
+    safeButton.addEventListener('click', function() {
+      // 文字の中身を元に戻す
+      statusText.textContent = "現在の状態：通常時";
+      // 文字の色（CSS）を直接緑色に戻す
+      statusText.style.color = "green";
+    });
   </script>
+
 </body>
 </html>
